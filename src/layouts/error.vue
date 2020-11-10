@@ -25,8 +25,8 @@ import { NuxtError } from '@nuxt/types';
     layout: 'empty'
 })
 export default class extends Vue {
-    @Prop()
-    error!: NuxtError;
+    @Prop({ type: Object, required: true })
+    readonly error!: NuxtError;
 
     @Provide()
     pageNotFound = '404 Not Found';
