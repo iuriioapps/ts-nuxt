@@ -27,5 +27,13 @@ module.exports = {
         '@typescript-eslint/no-useless-constructor': ['error'],
         'no-extra-semi': 'off',
         '@typescript-eslint/no-extra-semi': ['error']
-    }
+    },
+    overrides: [
+        {
+            files: ['*.vue'],
+            rules: {
+                indent: 'off'
+            }
+        }
+    ]
 };

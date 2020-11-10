@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
-import Simple from '../components/Simple.vue';
+import Simple from '@/components/Simple.vue';
 
 @Component({
     components: { Simple }
