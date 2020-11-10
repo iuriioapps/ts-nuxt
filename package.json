@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
+        "postinstall": "npx husky install",
         "dev": "nuxt-ts",
         "build": "nuxt-ts build",
         "start": "nuxt-ts start",
@@ -10,7 +11,7 @@
         "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
         "lint": "npm run lint:js && npm run lint:style",
         "test": "jest",
-        "cm": "cz"
+        "commit": "git-cz"
     },
     "lint-staged": {
         "*.{ts,js,vue}": "eslint",
@@ -18,14 +19,14 @@
     },
     "husky": {
         "hooks": {
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
             "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
             "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
         }
     },
     "config": {
         "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
+            "path": "cz-conventional-changelog"
         }
     },
     "dependencies": {
