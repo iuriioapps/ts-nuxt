@@ -9,7 +9,8 @@
         "lint:js": "eslint --ext .js,.ts,.vue --ignore-path .gitignore ./src",
         "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
         "lint": "npm run lint:js && npm run lint:style",
-        "test": "jest"
+        "test": "jest",
+        "cm": "cz"
     },
     "lint-staged": {
         "*.{js,vue}": "eslint",
@@ -17,8 +18,14 @@
     },
     "husky": {
         "hooks": {
+            "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
             "pre-commit": "lint-staged"
+        }
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
         }
     },
     "dependencies": {
@@ -47,6 +54,8 @@
         "babel-core": "7.0.0-bridge.0",
         "babel-eslint": "^10.1.0",
         "babel-jest": "^26.5.0",
+        "commitizen": "^4.2.2",
+        "cz-conventional-changelog": "^3.3.0",
         "eslint": "^7.13.0",
         "eslint-plugin-nuxt": "^1.0.0",
         "husky": "^4.3.0",
