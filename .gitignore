@@ -2,3 +2,5 @@ node_modules
 coverage
 .nuxt
 sw.js
+.nuxt-storybook
+storybook-static

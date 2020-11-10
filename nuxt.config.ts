@@ -50,6 +50,7 @@ export default {
     },
 
     vuetify: {
+        treeShake: true,
         optionsPath: '~/plugins/vuetify.options.ts'
     },
 
@@ -73,5 +74,13 @@ export default {
         timing: {
             total: true
         }
+    },
+
+    // Support for TypeScript is almost there:
+    // https://github.com/nuxt-community/storybook/pull/164
+    storybook: {
+        stories: [
+            '~/src/stories/**/*.stories.js'
+        ]
     }
 };

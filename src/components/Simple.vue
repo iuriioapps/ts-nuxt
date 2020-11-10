@@ -1,14 +1,16 @@
 <template>
     <div class="simple">
-        Simple component
+        {{ text }}
     </div>
 </template>
 
 <script lang="ts">
-    import { Component, Vue } from 'nuxt-property-decorator';
+    import { Component, Prop, Vue } from 'nuxt-property-decorator';
 
     @Component
     export default class Simple extends Vue {
+        @Prop({ type: String, required: false })
+        text! = 'Simple component'
     }
 </script>
 
