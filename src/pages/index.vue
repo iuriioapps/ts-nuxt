@@ -2,7 +2,7 @@
     <div>
         <div>{{ $t('app-name') }}</div>
         <v-btn @click="onClick">
-            Click me
+            Click me now!
         </v-btn>
         <Simple />
     </div>
