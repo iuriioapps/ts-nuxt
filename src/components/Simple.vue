@@ -9,8 +9,12 @@
 
     @Component
     export default class Simple extends Vue {
-        @Prop({ type: String, required: false })
-        text! = 'Simple component'
+        @Prop({
+            type: String,
+            required: false,
+            default: 'Simple component'
+        })
+        text!: string;
     }
 </script>
 

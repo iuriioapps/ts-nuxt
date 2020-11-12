@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 
 import Simple from '~/components/Simple.vue';
-import { Department } from '~/dal/Department';
+import { Department } from '~/model/Department';
 
 describe('Sample', () => {
     test('1st', () => {
